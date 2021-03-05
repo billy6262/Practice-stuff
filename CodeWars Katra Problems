@@ -1,13 +1,15 @@
 # make a function that filters strings from a list.
 
 def filter_list(l):
+    FilteredList = []    #one of the issues with your code is your grasp of instances. by soly manipulating data after its passed to your instance you are working on it simplifies any issues that may come up.
     for x in l:
-        if str in list:
-            l.remove(str)
-        else:
+#        if str in list:
+        if type(x) != str: #only compare elemnets of a similar type in functions. by calling type(x) we are changing its value to difine its type before comparing it to STR
+            FilteredList.append(x)
+        else:               # the else continue is not requiered in python. when stating for x in l you are instucting python to continue till its run through each element in the sting even if it dosnt modify them
             continue
 
-    return l
+    return FilteredList
 
 a = 'a'
 
