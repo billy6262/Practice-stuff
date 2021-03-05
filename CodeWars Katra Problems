@@ -1,13 +1,11 @@
 # make a function that filters strings from a list.
 
 def filter_list(l):
+    FilteredList = []
     for x in l:
-        if str in list:
-            l.remove(str)
-        else:
-            continue
-
-    return l
+        if type(x) != str:
+            FilteredList.append(x)
+    return FilteredList
 
 a = 'a'
 
